@@ -1,0 +1,189 @@
+:root {
+  --bg: #f5f6f8;
+  --surface: #ffffff;
+  --line: #d7dde4;
+  --text: #1f2933;
+  --muted: #66727f;
+  --link: #0f5c99;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+}
+
+.site-header {
+  border-bottom: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.header-inner,
+.app {
+  width: min(1080px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.header-inner {
+  padding: 16px 0;
+}
+
+.app {
+  padding: 24px 0 40px;
+}
+
+.page-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.page-link {
+  display: block;
+  min-width: 220px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  color: inherit;
+  text-decoration: none;
+}
+
+.page-link.active {
+  border-color: var(--text);
+}
+
+.nav-kicker,
+.nav-title {
+  display: block;
+  unicode-bidi: plaintext;
+}
+
+.nav-kicker {
+  margin-bottom: 4px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.nav-title {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.page-view {
+  display: grid;
+  gap: 16px;
+}
+
+.doc-page {
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.file-name {
+  margin: 0 0 16px;
+  color: var(--muted);
+  font-size: 0.95rem;
+  unicode-bidi: plaintext;
+}
+
+.doc-kicker {
+  margin: 0 0 6px;
+  color: var(--muted);
+  font-size: 0.95rem;
+  unicode-bidi: plaintext;
+}
+
+.doc-title {
+  margin: 0 0 18px;
+  font-size: 1.6rem;
+  line-height: 1.35;
+  unicode-bidi: plaintext;
+}
+
+h3 {
+  margin: 20px 0 10px;
+  font-size: 1rem;
+  line-height: 1.5;
+  unicode-bidi: plaintext;
+}
+
+.divider {
+  height: 1px;
+  margin: 18px 0;
+  background: var(--line);
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: right;
+  vertical-align: top;
+  border: 1px solid var(--line);
+  unicode-bidi: plaintext;
+}
+
+thead th {
+  background: #f0f3f6;
+  font-weight: 700;
+}
+
+a {
+  color: var(--link);
+  word-break: break-word;
+}
+
+p {
+  margin: 0 0 14px;
+  line-height: 1.8;
+  unicode-bidi: plaintext;
+}
+
+@media (max-width: 720px) {
+  .header-inner,
+  .app {
+    width: calc(100% - 20px);
+  }
+
+  .header-inner {
+    padding: 12px 0;
+  }
+
+  .app {
+    padding: 16px 0 24px;
+  }
+
+  .page-link,
+  .doc-page {
+    border-radius: 8px;
+  }
+
+  .doc-page {
+    padding: 16px;
+  }
+
+  .doc-title {
+    font-size: 1.35rem;
+  }
+
+  th,
+  td {
+    padding: 10px;
+  }
+}
